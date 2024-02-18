@@ -1,0 +1,9 @@
+name: tekiou
+on:
+  - push
+jobs:
+  echo:
+    runs-on: self-hosted
+    steps:
+      - name: Go
+        run: cd /var/www/sites.su443.com; sudo git pull; sudo systemctl reload nginx
