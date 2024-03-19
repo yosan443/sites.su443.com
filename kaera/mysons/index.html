@@ -21,14 +21,24 @@
             object-fit: contain;
             margin: 20px;
         }
+        #inputContainer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
         #inputText {
             font-size: 20px; /* テキストのサイズを変更 */
-            margin-bottom: 10px;
+            margin-right: 10px; /* テキストボックスの右に隙間を設定 */
         } 
         #quiz {
             font-size: 30px; /* テキストのサイズを変更 */
             margin-bottom: 10px;
-        }  
+        } 
+        #executeButton {
+            font-size: 24px; /* ボタンのフォントサイズを変更 */
+            width: 150px; /* ボタンの幅を指定 */
+            height: 50px; /* ボタンの高さを指定 */
+        } 
     </style>
     <script>
         function showImage() {
@@ -46,8 +56,10 @@
 </head>
 <body>
     <label id="quiz" for="inputText">ホワイトデーのプレゼントは？全部小文字で(空白アリ)</label>
-    <input type="text" id="inputText" />
-    <button onclick="showImage()">実行</button>
+    <div id="inputContainer">
+        <input type="text" id="inputText" />
+        <button id="executeButton" onclick="showImage()">実行</button>
+    </div>
 
     <div id="image-container" style="display:none;">
         <img src="IMG_1310.webp" alt="Image 1" />
