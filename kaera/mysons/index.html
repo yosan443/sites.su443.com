@@ -12,9 +12,7 @@
         }
         #image-container {
             display: none;
-            
-             /* 表示領域内に収めるための最大高さ */
-            overflow: auto; /* はみ出た場合にスクロールバーを表示 */
+            overflow: auto;
         }
         #image-container img {
             width: auto;
@@ -36,7 +34,7 @@
     </script>
 </head>
 <body>
-    <label for="inputText">ホワイトデーのプレゼントは？全部小文字で</label>
+    <label for="inputText">ホワイトデーのプレゼントは？全部小文字で(空白アリ)</label>
     <input type="text" id="inputText" onkeyup="showImage()" />
 
     <div id="image-container" style="display:none;">
