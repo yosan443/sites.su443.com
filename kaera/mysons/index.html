@@ -24,6 +24,11 @@
         #inputText {
             font-size: 20px; /* テキストのサイズを変更 */
             margin-bottom: 10px;
+        } 
+        #quiz {
+            font-size: 30px; /* テキストのサイズを変更 */
+            margin-bottom: 10px;
+        }  
     </style>
     <script>
         function showImage() {
@@ -37,7 +42,7 @@
     </script>
 </head>
 <body>
-    <label for="inputText">ホワイトデーのプレゼントは？全部小文字で(空白アリ)</label>
+    <label id="quiz" for="inputText">ホワイトデーのプレゼントは？全部小文字で(空白アリ)</label>
     <input type="text" id="inputText" onkeyup="showImage()" />
 
     <div id="image-container" style="display:none;">
