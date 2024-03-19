@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html>
 <head>
-    <title>特定の文字列入力時の画像表示</title>
+    <title>愛の画像共有</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
     <script>
         function showImage() {
             var inputText = document.getElementById("inputText").value;
-            if (inputText === "stick") {
-                document.getElementById("image").style.display = "block";
+            if (inputText === "iroha stick") {
+                document.getElementById("image-container").style.display = "flex";
             } else {
-                document.getElementById("image").style.display = "none";
+                document.getElementById("image-container").style.display = "none";
             }
         }
     </script>
 </head>
 <body>
-    <label for="inputText">特定の文字列を入力してください:</label>
+    <label for="inputText">ホワイトデーのプレゼントは？全部小文字で</label>
     <input type="text" id="inputText" onkeyup="showImage()" />
 
-    <div id="image" style="display:none;">
-        <img src="IMG_1310.webp" alt="Image" />
+    <div id="image-container" style="display:none;">
+        <img src="IMG_1310.webp" alt="Image 1" />
+        <img src="IMG_1311.webp" alt="Image 2" />
+        <img src="IMG_1312.webp" alt="Image 3" />
+        <img src="IMG_1313.webp" alt="Image 4" />
+        <img src="IMG_1315.webp" alt="Image 5" />
+        <img src="IMG_1316.webp" alt="Image 6" />
+        <img src="IMG_1317.webp" alt="Image 7" />
+        <img src="IMG_1318.webp" alt="Image 8" />
+        <img src="IMG_1319.webp" alt="Image 9" />
+        <img src="IMG_1320.webp" alt="Image 10" />
+        <img src="IMG_1321.webp" alt="Image 11" />
+        <!-- 他の画像も必要に応じて追加 -->
     </div>
 </body>
 </html>
