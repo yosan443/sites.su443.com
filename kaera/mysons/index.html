@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>特定の文字列入力時の画像表示</title>
+    <script>
+        function showImage() {
+            var inputText = document.getElementById("inputText").value;
+            if (inputText === "特定の文字列") {
+                document.getElementById("image").style.display = "block";
+            } else {
+                document.getElementById("image").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="inputText">特定の文字列を入力してください:</label>
+    <input type="text" id="inputText" onkeyup="showImage()" />
+
+    <div id="image" style="display:none;">
+        <img src="IMG_1310.webp" alt="Image" />
+    </div>
+</body>
+</html>
