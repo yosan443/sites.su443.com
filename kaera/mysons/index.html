@@ -39,11 +39,15 @@
                 document.getElementById("image-container").style.display = "none";
             }
         }
+        function displayImage() {
+            document.getElementById("image-container").style.display = "flex";
+        }
     </script>
 </head>
 <body>
     <label id="quiz" for="inputText">ホワイトデーのプレゼントは？全部小文字で(空白アリ)</label>
-    <input type="text" id="inputText" onkeyup="showImage()" />
+    <input type="text" id="inputText" />
+    <button onclick="showImage()">実行</button>
 
     <div id="image-container" style="display:none;">
         <img src="IMG_1310.webp" alt="Image 1" />
