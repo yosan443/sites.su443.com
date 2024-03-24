@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>愛の画像共有:3</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #image-container {
+            display: none;
+            overflow: auto;
+        }
+        #image-container img {
+            width: auto;
+            height: auto;
+            max-width: 80%;
+            object-fit: contain;
+            margin: 20px;
+        }
+        #inputContainer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        #inputText {
+            font-size: 20px; /* テキストのサイズを変更 */
+            margin-right: 10px; /* テキストボックスの右に隙間を設定 */
+        } 
+        #quiz {
+            font-size: 30px; /* テキストのサイズを変更 */
+            margin-bottom: 10px;
+        } 
+        #executeButton {
+            font-size: 30px; 
+            width: 100px; /* ボタンの幅を指定 */
+            height: 40px; /* ボタンの高さを指定 */
+        } 
+    </style>
+    <script>
+        function showImage() {
+            var inputText = document.getElementById("inputText").value;
+            if (inputText === "台湾") {
+                document.getElementById("image-container").style.display = "flex";
+            } else {
+                document.getElementById("image-container").style.display = "none";
+            }
+        }
+        function displayImage() {
+            document.getElementById("image-container").style.display = "flex";
+        }
+    </script>
+</head>
+<body>
+    <label id="quiz" for="inputText">今どこ？</label>
+    <div id="inputContainer">
+        <input type="text" id="inputText" />
+        <button id="executeButton" onclick="showImage()">❤️</button>
+    </div>
+
+    <div id="image-container" style="display:none;">
+        <img src="IMG_1520.webp" alt="Image 1" />
+        <img src="IMG_1521.webp" alt="Image 2" />
+        <!-- 他の画像も必要に応じて追加 -->
+    </div>
+</body>
+</html>
