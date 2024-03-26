@@ -14,7 +14,7 @@
             display: none;
             overflow: auto;
         }
-        #image-container img {
+        #image-container video {
             width: auto;
             height: auto;
             max-width: 80%;
@@ -62,8 +62,10 @@
     </div>
 
     <div id="image-container" style="display:none;">
-        <img src="siba.mp4" alt="Image 1" />
-        <!-- 他の画像も必要に応じて追加 -->
+        <video controls>
+            <source src="siba.mp4" type="video/mp4">
+            <!-- 他の動画形式に対応する場合はここに追加 -->
+        </video>
     </div>
 </body>
 </html>
