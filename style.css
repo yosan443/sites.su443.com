@@ -36,6 +36,12 @@
     .txt{
         display: none;
     } 
+    .print_area{
+        top:0 !IMPORTANT;
+        left:0 !IMPORTANT;
+        width:172mm !IMPORTANT;
+        height:251mm !IMPORTANT;
+    } 
 }
 @page {
 	margin: 0mm 5mm;
