@@ -28,9 +28,12 @@
     .bt{
         display: none;
     }
+    .txt{
+        display: none;
+    } 
 }
 @page {
-	size: A4 portrait;
+	size: A4 portrait; 
 }
 
 tr, col, br, ruby {
