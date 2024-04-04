@@ -28,13 +28,9 @@
     .bt{
         display: none;
     }
-  #hih {
-    display: none;
-  }
-    @page {
-        margin: 0;
-        size: auto;
-    }
+}
+@page {
+	size: A4 portrait;
 }
 
 tr, col, br, ruby {
