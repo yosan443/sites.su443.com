@@ -25,6 +25,9 @@
 }
 
 @media print {
+  #hih {
+    display: none;
+  }
     @page {
         margin: 0;
         size: auto;

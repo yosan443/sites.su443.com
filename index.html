@@ -5,9 +5,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <input type="text" class="txt" id="inputText">
-  <button onclick="updateText()" class="bt">実行</button>
-  <button onclick="printContent()" class="bt">印刷</button>
+  <input type="text" class="txt" id="hih" id="inputText">
+  <button onclick="updateText()" class="bt" id="hih">実行</button>
+  <button onclick="printContent()" id="hih" class="bt">印刷</button>
   <table style="border-collapse: collapse; table-layout: fixed; width: 594pt;">
     <tr style="height: 39.9pt;">
       <td style="width: 45pt;"></td>
@@ -211,8 +211,8 @@
 
     function printContent() {
       var originalContents = document.body.innerHTML;
-      var printContents = document.getElementsByTagName('table')[0].outerHTML;
-      document.body.innerHTML = printContents;
+      var pa = document.getElementsByClassName("pa");
+      document.body.innerHTML = pa;
       window.print();
       document.body.innerHTML = originalContents;
     }
