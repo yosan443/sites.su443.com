@@ -25,6 +25,9 @@
 }
 
 @media print {
+    .bt{
+        display: none;
+    }
   #hih {
     display: none;
   }
