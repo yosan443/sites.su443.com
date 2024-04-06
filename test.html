@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="html2canvas.js" type="text/javascript"></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pri">
+  <input type="text" class="txt" id="inputText">
+  <button onclick="updateText()" class="bt">実行</button>
+  <button onclick="capture()" class="bt">画像</button>
+  <table style="border-collapse: collapse; table-layout: fixed; width: 594pt;" id="yes">
+    <tr style="height: 39.9pt;">
+      <td style="width: 45pt;"></td>
+      <td class="xl67" style="height: 39.9pt; width: 176pt;"><a name="Print_Area"><span class="font9" id="outputText">やさい </span><span class="font5"> 宮城県大崎市産</span></a></td>
+      <td style="width: 9pt;"></td>
+      <td class="xl67" style="height: 39.9pt; width: 176pt;"><a name="Print_Area"><span class="font9" id="outputText2">やさい </span><span class="font5"> 宮城県大崎市産</span></a></td>
+      <td style="width: 9pt;"></td>
+      <td class="xl67" style="height: 39.9pt; width: 176pt;"><a name="Print_Area"><span class="font9" id="outputText3">やさい </span><span class="font5"> 宮城県大崎市産</span></a></td>
+      <td style="width: 45pt;"></td>
+    </tr>
+  </table>
+  <div id="result"></div> 
+
+  <script>
+    function updateText() {
+      var input = document.getElementById("inputText").value;
+      document.getElementById("outputText").textContent = input;
+      document.getElementById("outputText2").textContent = input;
+      document.getElementById("outputText3").textContent = input;
+    }
+    function capture() {
+      const element = document.querySelector("#yes");
+      element.style.opacity = 0;
+      html2canvas(element).then(canvas => {
+            element.style.opacity = 1;
+            const imgData = canvas.toDataURL("image/png");
+            const img = document.createElement("img");
+            img.src = imgData;
+            document.querySelector("#result").appendChild(img);
+      });
+    } 
+  </script>
+</body>
+</html>
