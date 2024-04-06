@@ -20,14 +20,10 @@
             element.style.display = "block";
             html2canvas(element).then(canvas => {
                 element.style.display = "none";
-                document.querySelector("#result").appendChild(canvas);
-
                 const imgData = canvas.toDataURL("image/png");
-                const downloadLink = document.createElement("a");
-                downloadLink.href = imgData;
-                downloadLink.download = "captured_image.png";
-                downloadLink.textContent = "Download Captured Image";
-                document.body.appendChild(downloadLink);
+                const img = document.createElement("img");
+                img.src = imgData;
+                document.querySelector("#result").appendChild(img);
             });
         }
     </script>
