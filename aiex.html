@@ -1,44 +1,28 @@
-const bun = require('bun');
-const server = bun();
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML to Image</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div id="capture" style="padding: 10px; border: 1px solid black; display: none;">
+        <h1>Hello, World!</h1>
+        <p>This is some text in a paragraph.</p>
+    </div>
+    <br>
+    <button onclick="capture()">Capture</button>
+    <br>
+    <div id="result"></div>
 
-server.use(bun.json());
-
-// ログインページを表示するためのGETリクエスト
-server.get('/login', (req, res) => {
-    res.send(`
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Login</title>
-        </head>
-        <body>
-            <h1>Login</h1>
-            <form action="/login" method="POST">
-                <label for="username">ユーザー名:</label>
-                <input type="text" id="username" name="username" required><br>
-                <label for="password">パスワード:</label>
-                <input type="password" id="password" name="password" required><br>
-                <input type="submit" value="ログイン">
-            </form>
-        </body>
-        </html>
-    `);
-});
-
-// ログイン情報を受け取り、認証するためのPOSTリクエスト
-server.post('/login', (req, res) => {
-    // ユーザーの認証などの処理を実装
-    // 例：ユーザー名とパスワードの比較
-    if (req.body.username === 'user' && req.body.password === 'password') {
-        res.send('ログイン成功！');
-    } else {
-        res.send('ログイン失敗...');
-    }
-});
-
-server.listen(3000, () => {
-    console.log('サーバーが起動しました。');
-});
+    <script>
+        function capture() {
+            const element = document.querySelector("#capture");
+            element.style.display = "block";
+            html2canvas(element).then(canvas => {
+                element.style.display = "none";
+                document.querySelector("#result").appendChild(canvas);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -47,9 +47,6 @@
 	margin: 0mm 5mm;
 	size: A4 portrait; 
 }
-.table {
-      break-before: page;
-}
 
 tr, col, br, ruby {
     mso-height-source: auto;
