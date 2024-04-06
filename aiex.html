@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>HTML to Image</title>
-    <script src="html2canvas.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </head>
 <body>
     <div id="capture" style="padding: 10px; border: 1px solid black; display: none;">
@@ -21,6 +21,13 @@
             html2canvas(element).then(canvas => {
                 element.style.display = "none";
                 document.querySelector("#result").appendChild(canvas);
+
+                const imgData = canvas.toDataURL("image/png");
+                const downloadLink = document.createElement("a");
+                downloadLink.href = imgData;
+                downloadLink.download = "captured_image.png";
+                downloadLink.textContent = "Download Captured Image";
+                document.body.appendChild(downloadLink);
             });
         }
     </script>
