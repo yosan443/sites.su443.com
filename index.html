@@ -9,7 +9,6 @@
   <input type="text" class="txt" id="hih" id="inputText">
   <button onclick="capture()" class="bt">Capture</button>
   <button onclick="updateText()" class="bt" id="hih">実行</button>
-  <button onclick="printContent()" id="hih" class="bt">印刷</button>
   <table style="border-collapse: collapse; table-layout: fixed; width: 594pt;" id="yes">
     <tr style="height: 39.9pt;">
       <td style="width: 45pt;"></td>
@@ -210,14 +209,6 @@
       for (var i = 0; i < outputs.length; i++) {
         outputs[i].textContent = input;
       }
-    }
-
-    function printContent() {
-      var originalContents = document.body.innerHTML;
-      var pa = document.getElementsByClassName("pa");
-      document.body.innerHTML = pa;
-      window.print();
-      document.body.innerHTML = originalContents;
     }
     function capture() {
       const element = document.querySelector("#yes");

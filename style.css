@@ -28,26 +28,6 @@
     text-align: center;
     border: 1pt solid windowtext;
 }
-
-@media print {
-    .bt{
-        display: none;
-    }
-    .txt{
-        display: none;
-    } 
-    .print_area{
-        top:0 !IMPORTANT;
-        left:0 !IMPORTANT;
-        width:172mm !IMPORTANT;
-        height:251mm !IMPORTANT;
-    } 
-}
-@page {
-	margin: 0mm 5mm;
-	size: A4 portrait; 
-}
-
 tr, col, br, ruby {
     mso-height-source: auto;
     mso-width-source: auto;
