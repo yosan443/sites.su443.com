@@ -218,8 +218,6 @@
             const imgData = canvas.toDataURL("image/png");
             const img = document.createElement("img");
             img.src = imgData;
-            img.width = 200; // 指定した幅
-            img.height = auto; // 指定した高さ
             document.querySelector("#result").appendChild(img);
       });
     } 
